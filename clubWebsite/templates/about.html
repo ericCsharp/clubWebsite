@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block main %}
+<!-- #{
+<figure class="ethan-image">
+    <h2 style="text-decoration:underline;">Do you know this man??!?</h2>
+    <a href="{{url_for('views.about')}}">
+        <img src="{{ url_for('static', filename='images/this-is-ethan.png') }}" alt="Our boi Ethan with some loot" style="width:450px"/>
+    </a>
+    <p class="basic-font" style="text-align:center;">Just take a look at that loot! WOW!</p>
+    <p class="basic-font" style="text-align:center;font-size:32px">This is a man that knows what he likes</p>
+    <p class="basic-font">Pictured above: The magic man coming back from a raid with hundreds of pounds of swag for his supporters.</p>
+    <p></p>
+</figure>
+
+<div class="ethan-info">
+    <p>
+        <span style="font-size:28px">&nbsp;Ethan Bonavida</span> is the president of the Computer Science club here at Moorpark College.
+        as the president of our very special club, Ethan has many jobs, including:
+    </p>
+    <ul>
+            FA
+        <li>Looking awesome</li>
+        <li>Attracting the babez</li>
+        <li>Charming faculty into increasing the club budget</li>
+        <li>Bringing back prizes as the people's champion</li>
+        <li style="text-decoration:line-through;font-size:10px;">Forcing club members to write websites for him</li>
+    </ul>
+    <p>
+        &nbsp;&nbsp;Now I know what you're thinking here: there couldn't possibly be a man capable of doing all these things. 
+        Well, you're right: Ethan is actually 1/36th part <span style="color: darkred">redwood</span>. I don't know how that works 
+        either, but it means he's not <span style="font-style: oblique;">just</span> a man. We haven't noticed anything very redwood 
+        about him, though.
+    </p>
+    <p>
+        &nbsp;&nbsp;However, upon being elected president of the Enthusiastic Programmers club, the Bonafide Bonavida 
+        gained the power of omniscience, which only increased the radiance of his awesome. Instead of having 50 times the 
+        power level of a regular human, he now has an effectively infinite advantage over the average person. This makes 
+        him even more capable of the job entrusted to him by the good club members of Enthusiastic Programmers.
+    </p>
+    <p>
+        &nbsp;&nbsp;This hero is so well liked, that he often can't play his recent favorite game, Destiny 2, in peace and quiet 
+        from his bothersome followers' questions and attention. The following is a graph showing the amount of disappointment 
+        accrued from Ethan's dismissal:
+    </p>
+    <img src="{{ url_for('static', filename='images/graph-ethan-dismissal.png') }}" alt="Very disappointing numbers in exponential form" style="text-align:center;width:500px"/>
+</div> 
+#} -->
+
+
+
+<h4>This is a page about us. Here are some quick FAQ's; hopefully it answers yours. Also meet the creators behind the programming and design of the whole website.</h4>
+<div class="faq-block">
+    <p class="question-text">Q: What is this website actually for?</p>
+    <p class="answer-text">A: To showcase and inform others about Moorpark College's amazing clubs</p>           
+</div>
+<br/> 
+<div class="faq-block">
+        <p><span style="font-size: 30px">ENTHUSIASTIC PROGRAMMERS CLUB OFFICIALS</span> </p>
+        <p>Jesus "Anthony" Gutierez: President of Enthusiastic Programmers </p>
+        <p>Chris Lowewnthal: Vice President Enthusiastic Programmers </p>
+        <p>Arzhang Valadkhani: Secretary of Enthusiastic Programmers </p>
+        <p>Zubair Sidhu: Treasurer of Enthusiastic Programmers
+                <img src="{{ url_for('static', filename='images/treasure.jpg') }}"  style="width:150px"/> </p>
+        </p>
+        <p>Ethan Bonivada: Technical Advisor of Enthusiastic Programmers</p>
+        <p>Ari Berkowitz: Activity Organizer of Enthusiastic Programmers</p>
+    </div>
+    <br/> 
+<div class="faq-block">
+    <p><span style="font-size: 30px">MEET THE TEAM</span> </p>
+    <p> Ethan Bonavida: President of production and design 
+    <img src="{{ url_for('static', filename='images/this-is-ethan.png') }}"  style="width:150px"/> </p>
+    <p> James Taylor: Co-Lead programmer and designer 
+    <img src="{{ url_for('static', filename='images/james.jpg') }}"  style="width:95px"/></p>
+    <p> Roger Fachini: Co-Lead programmer and designer
+            <img src="{{ url_for('static', filename='images/roger.jpg') }}"  style="width:150px"/> </p>
+    <p> Benjamin Hiebert: Senior Meme Engineer
+            <img src="{{ url_for('static', filename='images/ben.jpg') }}"  style="width:150px"/> </p>
+</div>
+<p class="cr"> &copy;2019 Enthusiastic Programmers </p>
+{% endblock %}

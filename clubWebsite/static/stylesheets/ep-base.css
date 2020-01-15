@@ -1,0 +1,167 @@
+img{
+    /* Prevent image from being too big on mobile */
+    max-width:100%;
+}
+
+body{
+    width:100%;
+    min-height:100vh;
+    padding:0px;
+    margin:0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    background-image: linear-gradient(to bottom, white 20% , rgb(140, 140, 140));
+}
+
+main{
+    margin:auto;    /* center it */
+    width:80vw;
+}
+
+header{
+    /* padding is used instead of width so background color expands to side of page */
+    padding-left:10%;
+    padding-right:10%;
+
+    display:flex;
+    align-items:center;
+    background-color:green;
+}
+
+#nav-bar {
+    width: 100%;
+    flex-grow:1;
+}
+#nav-bar ul{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    padding:6px;
+    list-style-type: none;
+}
+#nav-bar li{
+    flex-grow:1;
+
+    background-color:#eeeeee;
+    border-color:#e5e5e5;
+
+    border-width: 2px;
+    border-radius: 6px;
+
+
+
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+#nav-bar li a{
+    padding:10px;
+    display:block;
+    text-decoration: none;
+    color: black;
+}
+#nav-bar li:not(.current-page):hover{
+    background-color: #cecece;
+    text-decoration: overline;
+}
+
+table, th, td{
+    border: 1px solid black; 
+    text-align: center;                     
+} 
+
+
+
+
+.ethan-image{
+    float:right;
+    max-width:500px;
+    background-color:#ededed;
+}
+
+
+div.faq-block {
+    background-color: rgb(140,140, 140);
+    padding: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 12px;
+}
+
+p.question-text {
+    font-size: 24px;
+}
+
+.basic-font {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+#join-club{
+    display:flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+#join-club > *{
+    margin-top: 20px;
+}
+
+#join-club label{
+    display:block;
+}
+
+#join-club input[type=text], #join-club input[type=email]{
+    width:250px;
+    height:1.5em;
+}
+#join-club input[type=submit]{
+    height:2em;
+    margin-bottom: 20px;
+}
+
+
+/* Mobile media queries. At end of document so it overrides any other rules
+https://stackoverflow.com/questions/10262082/css-media-queries-and-important
+*/
+/* max-device-width is not recommended:
+https://stackoverflow.com/questions/18500836/should-i-use-max-device-width-or-max-width
+*/
+@media (max-width:43em){
+    figure{
+        margin-left:0px;
+        margin-right:0px;
+        /* Floating doesn't work well on small screens */
+        float:none !important;
+    }
+
+    main{
+        /* No margins on side of page */
+        width:100%;
+
+        /* But a bit of padding */
+        padding-left: 15px;
+        padding-right: 15px;
+
+        /* https://stackoverflow.com/questions/5219175/width-100-padding */
+        box-sizing: border-box;
+    }
+
+    header{
+        /* No margins on side of page */
+        padding:0px;
+
+        /* Put navbar below image */
+        flex-direction: column;
+    }
+        #nav-bar ul{
+            /* Ensure there's no wasted space between logo and navbar */
+            margin:0px;
+        }
+    #join-club{
+        /* Center inputs */
+        align-items:center;
+    }
+}
